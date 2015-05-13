@@ -1,0 +1,84 @@
+h1 {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-size: 45px;
+	padding-top: 100px;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	padding-bottom: 30px;
+}
+
+.content {
+	background-color: #fff;
+}
+
+.content label {
+	margin-bottom: 10px !important;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+
+.content input {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	border-radius: 2px;
+	color: #333;
+	height: 45px;
+}
+
+.content input[type="submit"] {
+	width: 74%;
+	border: 2px solid #333;
+	font-weight: 600;
+}
+
+.form-control {
+	box-shadow: none;
+}
+
+.form-control:focus {
+	box-shadow: none;
+	border-color: #333;
+	/* #04A2C5 */
+}
+
+.info-square {
+	height: 200px;
+	width: 200px;
+	margin-top: 10%;
+}
+
+.info-col {
+	display: inline-block;
+	padding: 25px;
+}
+
+.info-square-1 {
+	background-image: url("../img/pic1.jpg");
+	background-size: cover;
+}
+
+.info-square-2 {
+	background-image: url("../img/pic2.jpg");
+	background-size: cover;
+}
+
+.info-square-3 {
+	background-image: url("../img/pic3.jpg");
+	background-size: cover;
+}
+
+.info-square-4 {
+	background-image: url("../img/pic4.jpg");
+	background-size: cover;
+}
+
+@media (max-width: 400px) {
+	.info-square-3 {
+		margin-top: none !important;
+	}
+}

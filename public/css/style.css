@@ -1,0 +1,328 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+/* Default Body Styles */
+body {
+	background: #333;
+	color: #fff;
+	font-weight: 200;
+	font-size: 1em;
+	font-family: 'Raleway', 'Arial', sans-serif;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+	font-weight: 600;
+}
+
+a:hover, a:focus {
+	color: #debcc3;
+}
+
+section {
+	padding: 1em;
+	text-align: center;
+}
+
+/* Header */
+.header {
+	z-index: 1000;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	text-align: center;
+	max-width: 500px;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* Header Text */
+
+.header h1 {
+	margin: 0;
+	font-weight: 200;
+	font-size: 4em;
+	line-height: 1;
+	margin-bottom: -10px;
+	font-family: arvo;
+}
+
+.header h1 .desc {
+	display: block;
+	padding: 0.5em 0 0.6em 0.1em;
+	font-size: 40%;
+	line-height: 1.2;
+	opacity: 0.7;
+	margin-top: 5px;
+}
+
+.header h1 .creativity {
+	font-size: 100px;
+	margin-left: -60px;
+}
+
+/* To Navigation Style */
+.top-nav {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 0.69em;
+	line-height: 2.2;
+	position: relative;
+	z-index: 2000;
+}
+
+.top-nav a {
+	display: inline-block;
+	padding: 0.3em 0.7em;
+	text-decoration: none;
+	letter-spacing: 1px;
+	margin: 5px;
+}
+
+.top-nav span.right {
+	float: right;
+	font-size: 15px;
+}
+
+.top-nav span.right a {
+	display: block;
+	float: left;
+}
+
+.top-nav-icon:before {
+	margin: 0 4px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.logo {
+	padding: 0px;
+	font-size: 20px;
+}
+
+.logo:before {
+	content: "</";
+	font-weight: bold;
+	font-family: raleway;
+}
+.logo:after {
+	content: " >";
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+	padding-top: 2em;
+	font-size: 0.8em;
+}
+
+.codrops-demos a {
+	display: inline-block;
+	padding: 1.2em 3em;
+	outline: none;
+	border: 2px solid #333;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	/*width: 165px;*/
+    -webkit-transition: background-color ease-out 500ms, color ease-out 500ms;
+    -moz-transition: background-color ease-out 500ms, color ease-out 500ms;
+    -o-transition: background-color ease-out 500ms, color ease-out 500ms;
+    transition: background-color ease-out 500ms, color ease-out 500ms;
+    color: #333;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+	color: #fff;
+	background-color: #333;
+}
+
+.nav-right {
+	zoom: 1;
+	padding: 15px;
+	margin: 0px;
+}
+
+.nav-right:after {
+	content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.nav-right-project:hover:after {
+        width: 107px;
+        background: #fff;
+}
+
+.nav-right-portfolio:hover:after {
+        width: 51px;
+        background: #fff;
+}
+
+.nav-right-register:hover:after {
+        width: 79px;
+        background: #fff;
+}
+/* Animated Menu Icon */
+#nav-toggle {
+  padding-right: 4em;
+  padding-top: 20px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+   transition: 300ms;
+}
+
+#nav-toggle.active {
+	margin-right: 280px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+/* Push Out Navigation */
+#menu {
+  position: fixed;
+  background-color: rgb(10,10,10);
+  height: 100%;
+  z-index: 15000;
+  width: 280px;
+  color: #fff;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: .7;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#menu ul {
+  list-style: none;
+  margin-top: 0;
+  padding: 0
+}
+
+#menu ul li { border-bottom: none; }
+
+#menu>ul>li>a { border-left: 2px solid #222; }
+
+#menu ul li a {
+  color: inherit;
+  font-size: 20px;
+  display: block;
+  padding: 8px 0 8px 7px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: raleway;
+  font-weight: 100;
+}
+
+#menu ul a i {
+  margin-right: 10px;
+  font-size: 18px;
+  margin-top: 3px;
+  width: 20px;
+}
+
+#menu ul a i[class*='fa-caret'] { float: right; }
+
+#menu ul a:hover,
+#menu ul a.active {
+  background-color: #111;
+  border-left-color: #fff;
+  color: #fff;
+  font-weight: 100;
+}
+
+#menu ul a.active {
+	font-weight: bold;
+}
+
+#menu ul a:hover i:first-child { color: #FFCC33; }
+
+/* Submenu */
+
+#menu ul li a.active+ul { display: block }
+
+#menu ul li ul {
+  margin-top: 0;
+  display: none;
+}
+
+#menu ul li ul li { border-bottom: none; }
+
+#menu ul li ul li a { padding-left: 30px; }
+
+#menu ul li ul li a:hover { background-color: #1A1A1A; }
+
+/* Submenu */
+
+
+/* Cuando este a la Izq, para esconderlo posicionarlo a la Izq a -width */
+
+.right { right: -280px; }
+
+.show { right: 0; }
+
+@media screen and (max-width: 25em) {
+
+	.top-nav-icon span {
+		display: none;
+	}
+
+}

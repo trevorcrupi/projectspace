@@ -1,0 +1,9 @@
+{
+    "name": "communicode/quantum",
+    "type": "project",
+    "Description": "A communication platform between developers and nonprofits",
+    "keywords": ["communicode", "mvc", "nonprofits", "developers"],
+    "require-dev": {
+        "swiftmailer/swiftmailer": "@stable"
+    }
+}

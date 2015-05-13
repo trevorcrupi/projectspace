@@ -1,0 +1,255 @@
+/* NAVBAR CSS */
+body {
+	background: #F5F5F5;
+}
+
+.navbar-inverse {
+	border-radius: 0px;
+	border: none;
+}
+.navbar-brand {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	text-align: center;
+	margin: auto;
+}
+.navbar-inverse .navbar-toggle {
+	border: none;
+}
+a.headline {
+	text-decoration: none;
+	font-family: 'Raleway', serif;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 600;
+}
+/* Animated Menu Icon */
+#nav-toggle {
+  padding-right: 2em;
+  padding-top: 20px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+   transition: 300ms;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 30px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -8px;
+}
+#nav-toggle span:after {
+  bottom: -8px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+#logo {
+	max-width:100px;
+	margin-top: -7px;
+}
+
+/* SLIDE OUT NAV */
+/* Push Out Navigation */
+#menu {
+  position: fixed;
+  background-color: rgb(10,10,10);
+  height: 100%;
+  z-index: 15000;
+  width: 280px;
+  color: #fff;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: .7;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#menu ul {
+  list-style: none;
+  margin-top: 0;
+  padding: 0
+}
+
+#menu ul li { border-bottom: none; }
+
+#menu>ul>li>a { border-left: 2px solid #222; }
+
+#menu ul li a {
+  color: inherit;
+  font-size: 20px;
+  display: block;
+  padding: 8px 0 8px 7px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: raleway;
+  font-weight: 100;
+}
+
+#menu ul a i {
+  margin-right: 10px;
+  font-size: 18px;
+  margin-top: 3px;
+  width: 20px;
+}
+
+#menu ul a i[class*='fa-caret'] { float: right; }
+
+#menu ul a:hover,
+#menu ul a.active {
+  background-color: #111;
+  border-left-color: #fff;
+  color: #fff;
+  font-weight: 100;
+}
+
+#menu ul a.active {
+	font-weight: bold;
+}
+
+#menu ul a:hover i:first-child { color: #FFCC33; }
+
+/* Submenu */
+
+#menu ul li a.active+ul { display: block }
+
+#menu ul li ul {
+  margin-top: 0;
+  display: none;
+}
+
+#menu ul li ul li { border-bottom: none; }
+
+#menu ul li ul li a { padding-left: 30px; }
+
+#menu ul li ul li a:hover { background-color: #1A1A1A; }
+
+/* Submenu */
+
+/* FOOTER CSS */
+#copyright {
+	color:#bebdbb;
+	margin-top: 11px;
+	margin-bottom: 1px;
+}
+footer {
+	background-color: #e4e3e1;
+	padding: 50px;
+	height: 300px; /* Seems necessary for overlap. Adjust to breakpoints or remove */
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -100;
+	position: fixed;
+	text-align: center;
+}
+footer #icon {
+	width: 75%;
+	max-width: 75px;
+}
+footer ul {
+	list-style-type: none !important;
+}
+footer li {
+	padding-bottom: 1px;
+}
+footer a {
+	color: #333333;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+ul {
+	padding: 0px;
+	margin: 0px;
+}
+/* MEDIA QUERIES */
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: @screen-xs-max) {
+	footer #icon {
+		margin-top: -20px;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+	footer {
+		text-align: center;
+		height: 250px;
+	}
+	footer #icon {
+		margin-top: 0px;
+	}
+	footer li {
+		padding-bottom: 10px;
+	}
+	#copyright {
+		text-align: right;
+		margin-top: 0px;
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+	footer {
+		text-align: center;
+		height: 250px;
+	}
+	footer #icon {
+		margin-top: 0px;
+	}
+	footer li {
+		padding-bottom: 10px;
+	}
+	#copyright {
+		text-align: right;
+		margin-top: 0px;
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+	footer {
+		text-align: center;
+		height: 250px;
+	}
+	footer #icon {
+		margin-top: 0px;
+	}
+	footer li {
+		padding-bottom: 10px;
+	}
+	#copyright {
+		text-align: right;
+		margin-top: 0px;
+	}
+}
+
+@media (max-width: 850px) {
+	#nav-toggle {
+		display: none;
+	}
+}
