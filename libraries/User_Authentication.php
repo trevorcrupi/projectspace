@@ -4,10 +4,12 @@ class User_Authentication {
 
   public $Session;
   public $QueryBuilder;
+  public $Avatar;
 
   public function __construct() {
     $this->Session = load_class("Session");
     $this->QueryBuilder = load_class("QueryBuilder");
+    $this->Avatar = load_class("Avatar");
   }
 
   public function isEmpty($user_name, $user_pass) {
@@ -56,10 +58,9 @@ class User_Authentication {
     $this->Session->set('user_id', $user_id);
     $this->Session->set('user_name', $user_name);
     $this->Session->set('user_email', $user_email);
+    $this->Session->set("user_avatar_file", $this->Avatar->getFilePathByUserId('users', $user_id, $user_name));
+
     $this->Session->set('user_logged_in', true);
-    /*
-      TODO: Avatar Stuff Here
-    */
   }
 
   public function incrementFailedLogin($table, $user_name) {

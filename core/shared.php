@@ -59,6 +59,14 @@ function unregisterGlobals() {
     }
 }
 
+function curPageURL() {
+ return $_SERVER['REQUEST_URI'];
+}
+
+function curPageName() {
+ return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+}
+
 function smarturl() {
 	if(! isset($_GET['url'])) {
 	  return 'index/index';

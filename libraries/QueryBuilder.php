@@ -90,6 +90,11 @@ class QueryBuilder {
       return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    function singleArr() {
+      $this->execute();
+      return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     /** Get number of rows **/
     function getNumRows() {
         return $this->stmt->rowCount();

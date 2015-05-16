@@ -49,8 +49,6 @@ class Redirect {
 
   public function auth()
   {
-    $this->Session->init();
-
     if($this->Session->get('user_logged_in') != 1) {
       $this->Session->destroy();
       $this->to('login');

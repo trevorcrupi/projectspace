@@ -44,6 +44,7 @@ class Session {
   **/
   public function get($key)
   {
+      $this->init();
       if (isset($_SESSION[$key])) {
           return $_SESSION[$key];
       }
@@ -67,6 +68,7 @@ class Session {
   **/
   public function add($key, $value)
   {
+    $this->init();
     $_SESSION[$key][] = $value;
   }
 

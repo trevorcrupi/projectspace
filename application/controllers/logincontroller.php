@@ -14,7 +14,7 @@ class LoginController extends Controller {
     $Session = load_class("Session");
     $login_success = $this->Login->loginUser($Request->post('user_name'), $Request->post('password'));
     if($login_success) {
-      $Redirect->to('index/profile/'. $Session->get('user_name'));
+      $Redirect->to('profile/profile/'. $Session->get('user_name'));
     } else {
       $Redirect->to('login');
     }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Sign Up</title>
+		<title><?php echo $title ?></title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -28,10 +28,16 @@
 						<li><a href="<?php echo URL ?>" class="headline">Logo Here</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" class="headline">Learn More</a></li>
-						<li><a href="<?php echo URL ?>login" class="headline">Dashboard</a></li>
-						<li class="active"><a href="" class="headline"><?php echo $user['user_name'] ?></a></li>
-						<li style="margin-left: 10px;">
+						<li><a href="#" class="headline">Discover</a></li>
+						<li><a href="<?php echo URL ?>profile/dashboard" class="headline">Dashboard</a></li>
+						<li class="dropdown">
+						          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $sess_username ?> <span class="caret"></span></a>
+						          <ul class="dropdown-menu" role="menu">
+						            <li><a href="<?php echo URL ?>profile/profile/<?php echo $sess_username ?>">My Profile</a></li>
+						            <li><a href="<?php echo URL ?>profile/settings/<?php echo $sess_username ?>">Settings</a></li>
+						            <li><a href="#">Dashboard</a></li>
+						          </ul>
+						        </li>						<li style="margin-left: 10px;">
               <span class="right">
     		        <a id="nav-toggle" class=" headline top-nav-icon nav-right nav-right-menu" href="#">
     		            <span></span>

@@ -24,3 +24,11 @@ define('EMAIL_VERIFICATION_FROM_EMAIL', 'no-reply@communicode.com');
 define('EMAIL_VERIFICATION_FROM_NAME', 'Communicode');
 define('EMAIL_VERIFICATION_SUBJECT', 'Welcome to Communicode! Verify your account');
 define('EMAIL_VERIFICATION_CONTENT', 'Please click on this link to activate your account: ');
+
+/** AVATAR CONFIGURATIONS **/
+define('PATH_AVATARS', realpath(dirname(__FILE__).'/../../') . '/public/avatars/');
+define('PATH_AVATARS_PUBLIC', 'avatars/');
+define('PATH_AVATARS_SLASH', '/');
+define('AVATAR_SIZE', 200);
+define('AVATAR_DEFAULT_IMAGE', 'default.jpg');
+define('AVATAR_JPEG_QUALITY', 150);

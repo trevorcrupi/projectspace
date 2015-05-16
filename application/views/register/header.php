@@ -28,9 +28,9 @@
 						<li><a href="<?php echo URL ?>" class="headline">Logo Here</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" class="headline">Learn More</a></li>
-						<li><a href="<?php echo URL ?>login" class="headline">Login</a></li>
-						<li class="active"><a href="" class="headline">Register</a></li>
+						<li><a href="#" class="headline">The Community</a></li>
+						<li><a href="<?php echo URL ?>" class="headline">Dashboard</a></li>
+						<li class="active"><a href="<?php echo URL ?>" class="headline"><?php echo $user['user_name'] ?></a></li>
 						<li style="margin-left: 10px;">
               <span class="right">
     		        <a id="nav-toggle" class=" headline top-nav-icon nav-right nav-right-menu" href="#">
